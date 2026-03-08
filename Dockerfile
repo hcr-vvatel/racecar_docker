@@ -55,7 +55,7 @@ RUN wget -q https://github.com/novnc/noVNC/archive/v${NO_VNC_VERSION}.zip && \
     git clone --depth 1 https://github.com/novnc/websockify /noVNC-${NO_VNC_VERSION}/utils/websockify
 
 # Install additional python packages
-RUN pip install --no-cache-dir "numpy<1.25.0" scipy transforms3d opencv-contrib-python
+RUN pip install --no-cache-dir "numpy<1.25.0" scipy transforms3d opencv-contrib-python imutils
 
 # Kill the bell!
 RUN echo "set bell-style none" >> /etc/inputrc
