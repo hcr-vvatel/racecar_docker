@@ -1,9 +1,24 @@
 services:
+  camera:
+    build: ./docker/camera
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+    group_add:
+      - video
+    volumes:
+      - ./docker/camera/config/params.yaml:/camera/config/params.yaml
+    environment:
+      - ROS_DOMAIN_ID=0
   racecar:
-    build: .
+    build: ./docker/racecar
     image: staffmitrss/racecar-sim:amd
     ports:
       - 6080:6080 # VNC
     entrypoint: entrypoint.sh
     volumes:
       - ./home:/home/racecar
+    environment:
+      - ROS_DOMAIN_ID=0
+    depends_on:
+      - camera
