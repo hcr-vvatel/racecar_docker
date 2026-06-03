@@ -24,7 +24,7 @@ Then clone and pull the image:
 > and change the image from "staffmitrss/racecar-sim:amd", to "staffmitrss/racecar-sim:arm"
 
 ```
-git clone https://github.com/hcr-vvatel/racecar_docker.git
+git clone https://github.com/hcr-vvatel/hand_controlled_racecar_docker.git
 cd racecar_docker
 docker compose pull
 ```
