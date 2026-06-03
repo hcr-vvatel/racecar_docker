@@ -1,5 +1,7 @@
 # Hand Controlled Racecar Docker
- 
+
+https://github.com/user-attachments/assets/0eb432f5-b5ac-4838-9803-fe32edf42f49
+
 Fork of [mit-rss/racecar_docker](https://github.com/mit-rss/racecar_docker), the Docker environment used in MIT's Robotics: Science and Systems (RSS) course. Modified to support gesture-based teleoperation via the [hand_controller](https://github.com/hcr-vvatel/hand_controller) ROS 2 package.
 
 ## What Was Modified
